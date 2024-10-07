@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Mantenimiento de A/C</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Mantenimiento de A/C</h1>
+        <form id="maintenance-form">
+            <label for="client-name">Nombre del Cliente:</label>
+            <input type="text" id="client-name" required>
+
+            <label for="city">Ciudad:</label>
+            <input type="text" id="city" required>
+
+            <label for="start-date">Fecha de Inicio:</label>
+            <input type="date" id="start-date" required>
+
+            <label for="end-date">Fecha de Fin:</label>
+            <input type="date" id="end-date" required>
+
+            <label for="comments">Comentarios:</label>
+            <textarea id="comments" rows="30" placeholder="Escribe tus comentarios aquí..."></textarea>
+
+            <div class="photo-upload">
+                <h2>Subir Fotos:</h2>
+                <div id="photo-buttons"></div>
+                <p id="photo-warning" style="color: red; display: none;">Se ha alcanzado el máximo de 20 fotos.</p>
+                <div id="photo-preview"></div>
+            </div>
+
+            <button type="button" id="generate-pdf">Guardar como PDF</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
